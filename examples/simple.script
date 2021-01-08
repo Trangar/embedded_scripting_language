@@ -1,0 +1,6 @@
+led = get_pin("a7")
+loop:
+    set_high(led)
+    delay(1.0)
+    set_low(led)
+    delay(1.0)
