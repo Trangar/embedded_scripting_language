@@ -1,15 +1,6 @@
-[package]
-name = "scripting_lang"
-version = "0.1.0"
-authors = ["micro"]
-edition = "2018"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
-[dependencies]
-hashbrown = "0.9"
-
-[[bin]]
-name = "example_simple"
-path = "examples/simple.rs"
-
+[workspace]
+members = [
+    "embed",
+    "shared",
+    "web"
+]

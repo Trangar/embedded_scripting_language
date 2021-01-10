@@ -1,0 +1,102 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'embed'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=embed",
+                    "--package=embed"
+                ],
+                "filter": {
+                    "name": "embed",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'embed'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=embed",
+                    "--package=embed"
+                ],
+                "filter": {
+                    "name": "embed",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in library 'shared'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--lib",
+                    "--package=shared"
+                ],
+                "filter": {
+                    "name": "shared",
+                    "kind": "lib"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in library 'scripting-lang-web'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--lib",
+                    "--package=scripting-lang-web"
+                ],
+                "filter": {
+                    "name": "scripting-lang-web",
+                    "kind": "lib"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug integration test 'web'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--test=web",
+                    "--package=scripting-lang-web"
+                ],
+                "filter": {
+                    "name": "web",
+                    "kind": "test"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
